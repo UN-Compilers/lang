@@ -7,7 +7,7 @@ import (
 )
 
 type Listener struct {
-	*parsing.BaseJavaScriptParserListener
+	*parsing.BaselangParserListener
 }
 
 func (s *Listener) EnterEveryRule(ctx antlr.ParserRuleContext) {

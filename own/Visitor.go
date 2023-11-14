@@ -7,7 +7,7 @@ import (
 )
 
 type Visitor struct {
-	parsing.BaseJavaScriptParserVisitor
+	parsing.BaselangParserVisitor
 }
 
 func (v *Visitor) Visit(tree antlr.ParseTree) interface{} {

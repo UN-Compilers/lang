@@ -9,9 +9,9 @@ import (
 
 func main() {
 	input, _ := antlr.NewFileStream(os.Args[1])
-	lexer := parsing.NewJavaScriptLexer(input)
+	lexer := parsing.NewlangLexer(input)
 	stream := antlr.NewCommonTokenStream(lexer, 0)
-	p := parsing.NewJavaScriptParser(stream)
+	p := parsing.NewlangParser(stream)
 	tree := p.Program()
 	visitor := &own.Visitor{}
 	visitor.Visit(tree)

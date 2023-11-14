@@ -1,4 +1,4 @@
-lexer grammar LangLexer;
+lexer grammar langLexer;
 
 tokens { INDENT, DEDENT }
 
