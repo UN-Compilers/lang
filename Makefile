@@ -7,6 +7,6 @@ install-dependencies:
 run-tests-ci:
 	go test ./own/
 run-tests:
-	 docker run --rm -v .:/home/gousr/project go-antlr go test ./own
+	docker run --rm -v .:/home/gousr/project go-antlr go test ./own
 generate-parsing-files:
 	go generate ./...
