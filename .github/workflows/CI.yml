@@ -1,0 +1,29 @@
+name: Run automated tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        go: [ '1.21.4' ]
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: ${{ matrix.go }}
+      - name: install project dependencies
+        run: make install-dependencies
+      - name: generate parsing files
+        run: make generate-parsing-files
+      - name: run tests
+        run: make run-tests-ci
