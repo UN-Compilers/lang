@@ -14,6 +14,8 @@ LBRACK: '[';
 RBRACK: ']';
 RPAR: ')';
 DOTDOT: '..';
+TIMES: '*';
+PLUS: '+';
 INTEGER: [0-9]+;
 REAL: [0-9]+[.][0-9]+;
 IDENTIFIER: [_a-zA-Z]([_a-zA-Z0-9])*;
