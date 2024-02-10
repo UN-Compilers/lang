@@ -1,3 +1,4 @@
+parser/.antlr
 parsing/*
 input/
 .idea/
