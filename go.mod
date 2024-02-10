@@ -1,4 +1,4 @@
-module smell-hunter
+module lang
 
 go 1.21.4
 

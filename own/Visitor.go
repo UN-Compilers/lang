@@ -3,7 +3,7 @@ package own
 import (
 	"fmt"
 	"github.com/antlr4-go/antlr/v4"
-	"smell-hunter/parsing"
+	"lang/parsing"
 )
 
 type Visitor struct {

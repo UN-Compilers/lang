@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/antlr4-go/antlr/v4"
 	"os"
-	"smell-hunter/own"
-	"smell-hunter/parsing"
+	"lang/own"
+	"lang/parsing"
 )
 
 func main() {
