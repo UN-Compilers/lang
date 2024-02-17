@@ -5,8 +5,8 @@ run-docker:
 install-dependencies:
 	go mod tidy
 run-tests-ci:
-	go test ./own/
+	go test ./...
 run-tests:
-	docker run --rm -v .:/home/gousr/project go-antlr go test ./own
+	docker run --rm -v .:/home/gousr/project go-antlr go test ./...
 generate-parsing-files:
 	go generate ./...
