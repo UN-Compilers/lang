@@ -5,9 +5,11 @@ options {
     tokenVocab=langLexer;
 }
 
-program: var_declaration* EOF
-       ;
+program: var_declaration* EOF;
+
 var_declaration: IDENTIFIER IDENTIFIER ASSIGN exp;
+
+
 number: INTEGER
       | REAL
       ;
@@ -18,6 +20,6 @@ exp: exp TIMES exp
    | atom
    ;
 
- atom: number
-     | IDENTIFIER
-     ;
+atom: number
+    | IDENTIFIER
+    ;
