@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/antlr4-go/antlr/v4"
-	"os"
 	"lang/own"
 	"lang/parsing"
+	"os"
+
+	"github.com/antlr4-go/antlr/v4"
 )
 
 func main() {
