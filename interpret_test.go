@@ -19,6 +19,17 @@ func TestIntEval(t *testing.T) {
 	assert.Equal(t, 1, interp.VisitInteger(tree), "'1' should eval to 1")
 }
 
+func TestParens(t *testing.T) {
+	input := antlr.NewInputStream("(1)")
+	lexer := parsing.NewlangLexer(input)
+	stream := antlr.NewCommonTokenStream(lexer, 0)
+	p := parsing.NewlangParser(stream)
+	tree := p.Exp().(*parsing.ParensContext)
+	interp := &Interpreter{}
+
+	assert.Equal(t, 1, interp.VisitParens(tree), "'(1)' should eval to 1")
+}
+
 func TestIntSumEval(t *testing.T) {
 	input := antlr.NewInputStream("1+1")
 	lexer := parsing.NewlangLexer(input)

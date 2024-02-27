@@ -21,3 +21,7 @@ func (i *Interpreter) VisitInteger(ctx *parsing.IntegerContext) int {
 func (i *Interpreter) VisitSum(ctx *parsing.SumContext) interface{} {
 	return i.VisitInteger(ctx.Exp(0).(*parsing.IntegerContext)) + i.VisitInteger(ctx.Exp(1).(*parsing.IntegerContext))
 }
+
+func (i *Interpreter) VisitParens(ctx *parsing.ParensContext) interface{} {
+	return i.VisitInteger(ctx.Exp().(*parsing.IntegerContext))
+}
