@@ -7,7 +7,7 @@ options {
 
 program: exp* EOF;
 
-var_declaration: IDENTIFIER IDENTIFIER ASSIGN exp;
+let_statement: IDENTIFIER IDENTIFIER ASSIGN exp;
 
 exp: exp TIMES exp #product
    | exp PLUS exp  #sum
